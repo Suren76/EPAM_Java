@@ -12,13 +12,9 @@ public class GenerateArrayByInputNumber {
 
         switch (arrayLength) {
             case 3:
-                generatedArray = new int[3];
-                break;
             case 4:
-                generatedArray = new int[4];
-                break;
             case 5:
-                generatedArray = new int[5];
+                generatedArray = new int[arrayLength];
                 break;
             case 6:
             case 7:

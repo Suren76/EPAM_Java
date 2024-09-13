@@ -8,6 +8,10 @@ public class ChangeNextThreeElements {
 
         System.out.print("Please input array length: ");
         int n = scanner.nextInt();
+        if (n < 3) {
+            System.out.println("Program can't run with array elements less than 3!");
+            System.exit(120);
+        }
 
         int[] generatedArray = new int[n];
 
