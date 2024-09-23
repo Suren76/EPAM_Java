@@ -4,13 +4,13 @@ public class GetWordsCountInSentence {
     public static void main(String[] args) {
         String stringToCheck = "sentence to test code of words count";
 
-        boolean isInWordCheckPhase = true;
+        boolean isInWordCheckPhase = false;
         int wordsCount = 0;
 
         for (int i = 0; i < stringToCheck.length(); i++) {
             char charToCheck = stringToCheck.charAt(i);
 
-            if ((97 <= charToCheck && charToCheck <= 122 || 65 <= charToCheck && charToCheck <= 90) && !isInWordCheckPhase) {
+            if (('a' <= charToCheck && charToCheck <= 'z' || 'A' <= charToCheck && charToCheck <= 'Z') && !isInWordCheckPhase) {
                 isInWordCheckPhase = true;
                 wordsCount++;
             }

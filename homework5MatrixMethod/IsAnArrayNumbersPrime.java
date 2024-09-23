@@ -16,7 +16,7 @@ public class IsAnArrayNumbersPrime {
     static boolean isNumberPrime(int number) {
         boolean isPrime = true;
         for (int i = 2; i < number / 2; i++) {
-            if (number % i == 0) {
+            if (number % i == 0 && number != i) {
                 isPrime = false;
                 break;
             }

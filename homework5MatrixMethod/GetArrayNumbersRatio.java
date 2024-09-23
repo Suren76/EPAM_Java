@@ -10,12 +10,12 @@ public class GetArrayNumbersRatio {
     static double getArrayNumbersRatio(int[] array) {
         int positiveNumbersCount = 0, negativeNumbersCount = 0;
 
-        for (int number: array) {
+        for (int number : array) {
             if (number > 0) positiveNumbersCount++;
             if (number < 0) negativeNumbersCount++;
         }
 
-        if (negativeNumbersCount ==0) return -1;
+        if (negativeNumbersCount == 0) return -1;
         return 1.0 * positiveNumbersCount / negativeNumbersCount;
     }
 }
