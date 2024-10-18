@@ -6,7 +6,6 @@ class Room {
     int length;
 
     public Room(int width, int height, int length) {
-
         if (width <= 0 || height <= 0 || length <= 0) {
             System.out.println("One of dimensions is lower than 1");
             System.out.println(
@@ -16,6 +15,7 @@ class Room {
             );
             System.exit(250);
         }
+
         this.width = width;
         this.height = height;
         this.length = length;
@@ -23,14 +23,14 @@ class Room {
 }
 
 public class Home {
-    Room batroom;
+    Room bathroom;
     Room bedroom;
     Room hall;
     Room kitchen;
     Room livingRoom;
 
-    Home(Room batroom, Room bedroom, Room hall, Room kitchen, Room livingRoom) {
-        this.batroom = batroom;
+    Home(Room bathroom, Room bedroom, Room hall, Room kitchen, Room livingRoom) {
+        this.bathroom = bathroom;
         this.bedroom = bedroom;
         this.hall = hall;
         this.kitchen = kitchen;
@@ -38,14 +38,14 @@ public class Home {
     }
 
     public Home(
-            int batroomWidth, int batroomHeight, int batroomLength,
+            int bathroomWidth, int bathroomHeight, int bathroomLength,
             int bedroomWidth, int bedroomHeight, int bedroomLength,
             int hallWidth, int hallHeight, int hallLength,
             int kitchenWidth, int kitchenHeight, int kitchenLength,
             int livingRoomWidth, int livingRoomHeight, int livingRoomLength
     ) {
-        new Home(
-                new Room(batroomWidth, batroomHeight, batroomLength),
+        this(
+                new Room(bathroomWidth, bathroomHeight, bathroomLength),
                 new Room(bedroomWidth, bedroomHeight, bedroomLength),
                 new Room(hallWidth, hallHeight, hallLength),
                 new Room(kitchenWidth, kitchenHeight, kitchenLength),
@@ -59,12 +59,9 @@ public class Home {
             int kitchenWidth, int kitchenHeight, int kitchenLength,
             int livingRoomWidth, int livingRoomHeight, int livingRoomLength
     ) {
-        int batroomWidthDefault = 10;
-        int batroomHeightDefault = 10;
-        int batroomLengthDefault = 10;
-
-        new Home(
-                batroomWidthDefault, batroomHeightDefault, batroomLengthDefault,
+        this(
+                // set default params for bathroom
+                10, 10, 10,
                 bedroomWidth, bedroomHeight, bedroomLength,
                 hallWidth, hallHeight, hallLength,
                 kitchenWidth, kitchenHeight, kitchenLength,
