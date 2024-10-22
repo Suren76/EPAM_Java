@@ -29,6 +29,8 @@ public class SmartLight {
     public void setBrightness(int brightness) {
         if (brightness >= 0 && brightness <= 100) {
             this.brightness = brightness;
+        } else {
+            System.out.println("'"+ brightness +"' is out of required range(0-100)");
         }
     }
 
@@ -42,5 +44,11 @@ public class SmartLight {
 
     public void toggle() {
         setOn(!isOn);
+    }
+
+    public void reset() {
+        setBrightness(50);
+        setOn(false);
+        setColor("white");
     }
 }

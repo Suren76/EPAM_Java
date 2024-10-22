@@ -8,16 +8,11 @@ public class RemoteControl {
     }
 
     public void resetLight() {
-        smartLight = new SmartLight();
+        smartLight.reset();
     }
 
-    public SmartLight getLightStatus() {
-        // 2.Implement a SmartLight getLightStatus() method in the RemoteControl that
-        // returns the SmartLight object, allowing access to its status.
-
-        // looks like that this method should not return SmartLight, only true or false
-
-        return smartLight;
+    public boolean getLightStatus() {
+        return smartLight.isOn();
     }
 
     public void changeBrightnessTo(int brightness) {

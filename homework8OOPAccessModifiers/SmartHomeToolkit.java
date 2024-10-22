@@ -6,7 +6,7 @@ public class SmartHomeToolkit {
         RemoteControl smartLightRemoteControl = new RemoteControl(smartLight);
 
         smartLightRemoteControl.changeBrightnessTo(100);
-        System.out.println(smartLightRemoteControl.getLightStatus().isOn());
+        System.out.println(smartLightRemoteControl.getLightStatus());
         smartLightRemoteControl.resetLight();
     }
 }
