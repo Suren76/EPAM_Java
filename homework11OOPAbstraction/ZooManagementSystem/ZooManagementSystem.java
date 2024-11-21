@@ -1,4 +1,4 @@
-package homework11OOPAbstraction;
+package homework11OOPAbstraction.ZooManagementSystem;
 
 public class ZooManagementSystem {
     public static void main(String[] args) {

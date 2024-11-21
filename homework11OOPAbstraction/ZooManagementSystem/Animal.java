@@ -1,4 +1,4 @@
-package homework11OOPAbstraction;
+package homework11OOPAbstraction.ZooManagementSystem;
 
 abstract class Animal {
     protected String name;

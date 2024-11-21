@@ -1,4 +1,4 @@
-package homework11OOPAbstraction;
+package homework11OOPAbstraction.ZooManagementSystem;
 
 class Elephant extends Animal implements TrickPerformer {
     public Elephant(String name, int age) {
