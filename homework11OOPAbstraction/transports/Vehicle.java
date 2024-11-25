@@ -6,7 +6,7 @@ abstract class Vehicle {
 
     protected Vehicle(EnergyToMotionSystem motionSystem, String energySource) {
         this.motionSystem = motionSystem;
-        this.energySource = energySource;
+        setEnergySource(energySource);
     }
 
     public void start() {
@@ -18,11 +18,13 @@ abstract class Vehicle {
         return energySource;
     }
 
-    public void setEnergySource(String energySource) {
+    protected void setEnergySource(String energySource) {
         if (energySource.equals("gas") || energySource.equals("electricity") || energySource.equals("diesel")) {
             this.energySource = energySource;
         } else {
             System.out.println("invalid energy source: " + energySource);
         }
     }
+
+    public abstract String getVehicleType();
 }

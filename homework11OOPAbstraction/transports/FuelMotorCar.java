@@ -1,9 +1,9 @@
 package homework11OOPAbstraction.transports;
 
-public class FuelMotorCar extends Car {
+abstract class FuelMotorCar extends Car {
     Engine motionSystem;
 
-    public FuelMotorCar() {
-        super(new Engine(), "gas");
+    protected FuelMotorCar(String energySource) {
+        super(energySource);
     }
 }

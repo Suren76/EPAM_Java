@@ -1,14 +1,23 @@
 package homework11OOPAbstraction.transports;
 
-public class DieselMotorCar extends Car implements FuelMountInterface {
+public class DieselMotorCar extends FuelMotorCar implements GasMountInterface {
     Engine motionSystem;
 
     public DieselMotorCar() {
-        super(new Engine(), "diesel");
+        super("diesel");
     }
 
     @Override
     public void switchToGas() {
         energySource = "gas";
+    }
+
+    public void switchToDiesel() {
+        energySource = "diesel";
+    }
+
+    @Override
+    public String getVehicleType() {
+        return "Diesel Motor Car";
     }
 }

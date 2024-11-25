@@ -6,4 +6,9 @@ public class MotorCycle extends Vehicle {
     protected MotorCycle() {
         super(new Engine(), "diesel");
     }
+
+    @Override
+    public String getVehicleType() {
+        return "Motorcycle";
+    }
 }

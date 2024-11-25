@@ -1,5 +1,5 @@
 package homework11OOPAbstraction.transports;
 
-interface FuelMountInterface {
+interface GasMountInterface {
     void switchToGas();
 }
