@@ -7,7 +7,7 @@ public class Gift {
         this.itemToBeGift = itemToBeGift;
     }
 
-    public Item getGift() {
+    public Item getGiftItem() {
         return itemToBeGift;
     }
 
@@ -17,5 +17,19 @@ public class Gift {
 
     public String getGiftName() {
         return itemToBeGift.getName();
+    }
+
+    @Override
+    public String toString() {
+        if (itemToBeGift == null) return "no gift";
+        return "Gift{" +
+                "name=" + itemToBeGift.getName() +
+                ", price=" + itemToBeGift.getPrice() +
+                '}';
+    }
+
+    public static boolean isTwoGiftsEqual(Gift giftOne, Gift giftTwo) {
+        return giftOne.getGiftName().equals(giftTwo.getGiftName()) &&
+                giftOne.getPrice() == giftTwo.getPrice();
     }
 }

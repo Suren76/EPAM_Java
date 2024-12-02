@@ -20,7 +20,7 @@ public abstract class Item {
     }
 
     public Gift getGift() {
-        return gift;
+        return gift == null || gift.itemToBeGift == null ? null: gift;
     }
 
     public void removeGift() {
@@ -36,7 +36,7 @@ public abstract class Item {
         return "Item{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", gift=" + gift +
+                ", gift=" + getGift() +
                 '}';
     }
 }
