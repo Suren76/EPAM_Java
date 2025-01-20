@@ -17,6 +17,8 @@ public class ArrayListWithNumbers {
         numberList.add(8);
         numberList.add(8.39);
 
+        numberList.add(108.0);
+
         System.out.println(numberList);
 
         ArrayList<Integer> filteredList = getIntegerList(numberList);
@@ -36,6 +38,6 @@ public class ArrayListWithNumbers {
     }
 
     private static boolean checkIsNumberInteger(Number number) {
-        return number.intValue() == (int) number.doubleValue();
+        return number.getClass() == Integer.class;
     }
 }
